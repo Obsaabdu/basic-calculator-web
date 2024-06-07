@@ -6,27 +6,27 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Calculator</title>
 </head>
-<body  class="flex justify-center items-center h-[100vh] bg-white m-0 font-sans">
-    <div id="calculator" class="bg-[#ddd9d9] rounded-2xl shadow-md p-5 w-[320px] h-[600px] grid grid-rows-[auto 1fr] border-[2px] border-[#56d424] relative">
+<body  class="flex justify-center items-center h-[100vh] bg-white m-0 font-[Arial, sans-serif]">
+    <div id="calculator" class="bg-[#ddd9d9] rounded-2xl shadow-md p-5 w-[355px] h-[600px] grid-rows-[auto 1fr] border-[2px] border-[#56d424] relative">
         <div id="display" class="bg-[#474343] text-white text-right text-[2em] h-[70px] p-2.5 rounded-[5px] mb-2.5 relative">0</div>
-        <div id="btnclr" class="bg-[#ed240d] hover:bg-red-400 border-none rounded-[10px] w-[63px] h-[80px] text-white p-5 mb-2.5 ml-[255px] text-2xl cursor-pointer transition duration-300 ease-in-out ">C</div>
-        <div>
-            <div id="btn7" onclick="appendToDisplay('7')">7</div>
-            <div id="btn8" onclick="appendToDisplay('8')">8</div>
-            <div id="btn9" onclick="appendToDisplay('9')">9</div>
-            <div id="btndv" onclick="appendToDisplay('/')">/</div>
-            <div id="btn4" onclick="appendToDisplay('4')">4</div>
-            <div id="btn5" onclick="appendToDisplay('5')">5</div>
-            <div id="btn6" onclick="appendToDisplay('6')">6</div>
-            <div id="btnml" onclick="appendToDisplay('*')">*</div>
-            <div id="btn1" onclick="appendToDisplay('1')">1</div>
-            <div id="btn2" onclick="appendToDisplay('2')">2</div>
-            <div id="btn3" onclick="appendToDisplay('3')">3</div>
-            <div id="btnmi" onclick="appendToDisplay('-')">-</div>
-            <div id="btn0" onclick="appendToDisplay('0')">0</div>
-            <div id="btnpt" onclick="appendToDisplay('.')">.</div>
-            <div id="btn equals" onclick="calculateResult()">=</div>
-            <div id="btnpl" onclick="appendToDisplay('+')">+</div>
+        <div id="btnclr" class="bg-[#ed240d] hover:bg-red-700 border-none rounded-[10px] w-[63px] h-[80px] text-white p-5 mb-2.5 ml-[255px] text-2xl cursor-pointer transition duration-300 ease-in-out">C</div>
+        <div class="grid grid-cols-4 gap-5">
+            <div id="btn7" class="h-20 bg-[#726f6f] border-none rounded-[10px] text-white p-5 text-2xl cursor-pointer hover:bg-[#505050] transition duration-300 ease-in-out" onclick="appendToDisplay('7')">7</div>
+            <div id="btn8" class="h-20 bg-[#726f6f] border-none rounded-[10px] text-white p-5 text-2xl cursor-pointer hover:bg-[#505050] transition duration-300 ease-in-out" onclick="appendToDisplay('8')">8</div>
+            <div id="btn9" class="h-20 bg-[#726f6f] border-none rounded-[10px] text-white p-5 text-2xl cursor-pointer hover:bg-[#505050] transition duration-300 ease-in-out" onclick="appendToDisplay('9')">9</div>
+            <div id="btndv" class="bg-[#f08a1e] border-none rounded-[10px] text-white p-5 text-2xl cursor-pointer hover:bg-[#c08500] transition duration-300 ease-in-out"  onclick="appendToDisplay('/')">/</div>
+            <div id="btn4" class="h-20 bg-[#726f6f] border-none rounded-[10px] text-white p-5 text-2xl cursor-pointer hover:bg-[#505050] transition duration-300 ease-in-out" onclick="appendToDisplay('4')">4</div>
+            <div id="btn5" class="h-20 bg-[#726f6f] border-none rounded-[10px] text-white p-5 text-2xl cursor-pointer hover:bg-[#505050] transition duration-300 ease-in-out" onclick="appendToDisplay('5')">5</div>
+            <div id="btn6" class="h-20 bg-[#726f6f] border-none rounded-[10px] text-white p-5 text-2xl cursor-pointer hover:bg-[#505050] transition duration-300 ease-in-out" onclick="appendToDisplay('6')">6</div>
+            <div id="btnml" class="bg-[#f08a1e] border-none rounded-[10px] text-white p-5 text-2xl cursor-pointer hover:bg-[#c08500] transition duration-300 ease-in-out" onclick="appendToDisplay('*')">*</div>
+            <div id="btn1" class="h-20 bg-[#726f6f] border-none rounded-[10px] text-white p-5 text-2xl cursor-pointer hover:bg-[#505050] transition duration-300 ease-in-out" onclick="appendToDisplay('1')">1</div>
+            <div id="btn2" class="h-20 bg-[#726f6f] border-none rounded-[10px] text-white p-5 text-2xl cursor-pointer hover:bg-[#505050] transition duration-300 ease-in-out" onclick="appendToDisplay('2')">2</div>
+            <div id="btn3" class="h-20 bg-[#726f6f] border-none rounded-[10px] text-white p-5 text-2xl cursor-pointer hover:bg-[#505050] transition duration-300 ease-in-out" onclick="appendToDisplay('3')">3</div>
+            <div id="btnmi" class="bg-[#f08a1e] border-none rounded-[10px] text-white p-5 text-2xl cursor-pointer hover:bg-[#c08500] transition duration-300 ease-in-out" onclick="appendToDisplay('-')">-</div>
+            <div id="btn0" class="h-20 bg-[#726f6f] border-none rounded-[10px] text-white p-5 text-2xl cursor-pointer hover:bg-[#505050] transition duration-300 ease-in-out" onclick="appendToDisplay('0')">0</div>
+            <div id="btnpt" class="h-20 bg-[#726f6f] border-none rounded-[10px] text-white p-5 text-2xl cursor-pointer hover:bg-[#505050] transition duration-300 ease-in-out" onclick="appendToDisplay('.')">.</div>
+            <div id="btnequals" class="h-20 bg-[#17b246] border-none rounded-[10px] text-white p-5 text-2xl cursor-pointer hover:bg-[#1c7a31] transition duration-300 ease-in-out" onclick="calculateResult()">=</div>
+            <div id="btnpl" class="bg-[#f08a1e] border-none rounded-[10px] text-white p-5 text-2xl cursor-pointer hover:bg-[#c08500] transition duration-300 ease-in-out" onclick="appendToDisplay('+')">+</div>
 
         </div>
     </div>
